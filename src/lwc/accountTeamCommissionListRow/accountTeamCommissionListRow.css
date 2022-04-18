@@ -8,14 +8,13 @@
   flex-direction: row;
 }
 
-.row > span {
+.row > span:not(:last-child) {
   min-width: 20px;
   flex: 1;
 }
 
 .row > span:last-child {
-  min-width: 35px;
-  max-width: 200px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   gap: 5px;
