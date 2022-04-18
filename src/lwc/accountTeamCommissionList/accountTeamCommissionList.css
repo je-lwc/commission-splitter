@@ -1,0 +1,9 @@
+.header > span {
+  min-width: 20px;
+  flex: 1;
+}
+
+.header > span:last-child {
+  min-width: 40px;
+  flex: 3;
+}
