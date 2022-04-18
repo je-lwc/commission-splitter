@@ -2,6 +2,24 @@
   "name": "@wcd/je-lwc.commission-splitter",
   "version": "0.0.0",
   "scripts": {
-    "serve": "npx wcd-cli@latest serve iLAU51mlFSHBXikw8XCI --open"
+    "serve": "npx wcd-cli@latest serve iLAU51mlFSHBXikw8XCI --open",
+    "push": "git add -A && git commit -m 'save' && git push"
+  },
+  "devDependencies": {
+    "@lwc/eslint-plugin-lwc": "^1.1.1",
+    "@prettier/plugin-xml": "^1.1.0",
+    "@salesforce/eslint-config-lwc": "^3.2.1",
+    "@salesforce/eslint-plugin-lightning": "^1.0.0",
+    "@salesforce/sfdx-lwc-jest": "^1.1.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-apex": "^1.10.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-prettier": "^2.0.0"
   }
 }

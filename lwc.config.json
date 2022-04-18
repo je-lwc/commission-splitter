@@ -4,7 +4,15 @@
       "npm": "lightning-base-components"
     },
     {
-      "dir": "src"
+      "dir": "src/lwc"
+    },
+    {
+      "name": "lightning/platformShowToastEvent",
+      "path": "src/mock/showToastEvent.js"
+    },
+    {
+      "name": "@salesforce/apex/AccountTeamController.getTeamMembers",
+      "path": "src/mock/getTeamMembers.js"
     }
   ]
 }
