@@ -4,12 +4,14 @@
     <span>{member.role}</span>
     <span class="percentage">
       <input type="number" min="0" max="100" step="1" value={member.pct} />
-      <lightning-slider
-        label="Percentage"
-        value={member.pct}
-        variant="label-hidden"
-        size="x-small"
-      ></lightning-slider>
+      <div class="slider-wrapper">
+        <lightning-slider
+          label="Percentage"
+          value={member.pct}
+          variant="label-hidden"
+          size="x-small"
+        ></lightning-slider>
+      </div>
     </span>
   </div>
 </template>

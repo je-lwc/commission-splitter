@@ -17,3 +17,19 @@
   min-width: 40px;
   flex: 3;
 }
+
+.slider-wrapper {
+  height: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(12rem - 1.8125rem); /* 12rem for x-small - .8125 font-size - 0.5x2 padding */
+}
+
+input[type='number'] {
+  border: none;
+  height: 18px;
+  border-bottom: 1px dotted;
+  border-radius: 0.25em;
+}
