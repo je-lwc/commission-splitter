@@ -20,8 +20,3 @@
   min-width: 40px;
   flex: 3;
 }
-
-c-account-team-commission-list-row {
-  padding-bottom: 3px;
-  border-bottom: 1px solid #d3d3d3;
-}

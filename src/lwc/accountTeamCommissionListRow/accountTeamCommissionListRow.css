@@ -11,6 +11,8 @@
 .row > span {
   min-width: 20px;
   flex: 1;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .row > span:last-child {
