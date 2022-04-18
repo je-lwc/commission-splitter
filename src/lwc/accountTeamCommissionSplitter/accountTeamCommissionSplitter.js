@@ -24,5 +24,15 @@ export default class AccountCommissionSplitter extends LightningElement {
     return this._accountId;
   }
 
-  get 
+  get carpenters() {
+    return this.members.filter((m) => m.role === 'Carpenter');
+  }
+
+  get plumbers() {
+    return this.members.filter((m) => m.role === 'Plumber');
+  }
+
+  get fixers() {
+    return this.members.filter((m) => m.role === 'Fixer');
+  }
 }
