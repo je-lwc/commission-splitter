@@ -46,7 +46,6 @@ input[type='number'] {
 input[type='number'] {
   border: none;
   height: 20px;
-  border-bottom: 1px dotted;
   border-radius: 0.25em;
   width: 2.5em;
 }
