@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <span>{member.name}</span>
+    <span>{member.role}</span>
+    <span>
+      <input type="number" min="0" max="100" step="1" value={member.pct} />
+      <lightning-slider label="" value={member.pct}></lightning-slider>
+    </span>
+  </div>
+</template>

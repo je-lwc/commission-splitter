@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <c-account-team-commission-list-row
+      for:each={members}
+      for:item="m"
+      key={m.id}
+      member={m}
+    ></c-account-team-commission-list-row>
+  </div>
+</template>
