@@ -11,7 +11,6 @@ export default class AccountTeamCommissionListRow extends LightningElement {
   }
 
   handlePercentageUpdate(value) {
-    console.log(value);
     this._member = { ...this.member, pct: parseInt(value, 10) || 0 };
   }
 
