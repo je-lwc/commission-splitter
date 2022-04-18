@@ -1,0 +1,8 @@
+.percentage {
+  display: flex;
+  flex-direction: row;
+}
+
+lightning-slider label {
+  display: none;
+}
