@@ -12,3 +12,8 @@
   min-width: 20px;
   flex: 1;
 }
+
+.row > span:last-child {
+  min-width: 40px;
+  flex: 3;
+}
