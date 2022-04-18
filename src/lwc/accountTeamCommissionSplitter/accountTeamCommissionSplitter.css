@@ -11,3 +11,9 @@ h1 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
