@@ -4,3 +4,10 @@
   border: 1px solid var(--lwc-colorBorder, #dddbda);
   padding: 8px 12px;
 }
+
+h1 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
