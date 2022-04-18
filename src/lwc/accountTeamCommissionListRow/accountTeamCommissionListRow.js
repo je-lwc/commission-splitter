@@ -15,7 +15,7 @@ export default class AccountTeamCommissionListRow extends LightningElement {
     this._member = { ...this.member, pct: value };
   }
 
-  handleSliderInput({ detail: value }) {
+  handleSliderInput({ detail: { value } }) {
     this.handlePercentageUpdate(value);
   }
 
