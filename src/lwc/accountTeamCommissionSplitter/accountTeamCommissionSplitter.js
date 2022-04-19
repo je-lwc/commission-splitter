@@ -88,6 +88,6 @@ export default class AccountCommissionSplitter extends LightningElement {
   // end getter for role group validations
 
   handleRowChange({ detail: { id, pct } }) {
-    this.members = this.members.map((m) => (m.id === id ? { ...m, pct } : m));
+    this._members = this._members.map((m) => (m.id === id ? { ...m, pct } : m));
   }
 }
