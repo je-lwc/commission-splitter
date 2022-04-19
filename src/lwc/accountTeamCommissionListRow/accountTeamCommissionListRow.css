@@ -6,6 +6,7 @@
 .row {
   display: flex;
   flex-direction: row;
+  border-radius: 0.25em;
 }
 
 .row > span:not(:last-child) {
@@ -47,4 +48,8 @@ input[type='number'] {
   height: 20px;
   border-radius: 0.25em;
   width: 2.5em;
+}
+
+.error {
+  box-shadow: 0 0 5px 1px #d9534f;
 }

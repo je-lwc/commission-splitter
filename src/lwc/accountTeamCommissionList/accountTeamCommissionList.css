@@ -1,4 +1,6 @@
 .table {
+  border-radius: 0.25em;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -23,4 +25,8 @@
 c-account-team-commission-list-row {
   padding-bottom: 3px;
   border-bottom: 1px solid #d3d3d3;
+}
+
+.error {
+  box-shadow: 0 0 10px 3px #d9534f;
 }
