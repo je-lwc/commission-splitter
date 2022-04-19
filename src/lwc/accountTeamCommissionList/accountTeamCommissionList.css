@@ -33,5 +33,6 @@ c-account-team-commission-list-row {
 
 .errorMsg {
   color: #d9534f;
-  font-size: 10px;
+  font-size: 12px;
+  margin-top: 10px;
 }
