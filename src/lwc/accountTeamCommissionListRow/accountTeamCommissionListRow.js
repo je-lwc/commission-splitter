@@ -12,6 +12,13 @@ export default class AccountTeamCommissionListRow extends LightningElement {
 
   handlePercentageUpdate(value) {
     this._member = { ...this.member, pct: parseInt(value, 10) || 0 };
+    this.dispatchEvent(
+      new CustomEvent('rowchange', {
+        detail: this.member,
+        bubbles: true,
+        composed: true
+      })
+    );
   }
 
   handleSliderInput({ detail: { value } }) {

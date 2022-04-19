@@ -1,16 +1,20 @@
 import { LightningElement, api } from 'lwc';
 import getTeamMembers from '@salesforce/apex/AccountTeamController.getTeamMembers';
 
+function percentageSum(members) {
+  return members.reduce((sum, m) => sum + parseInt(m.pct, 10), 0) === 100;
+}
+
 export default class AccountCommissionSplitter extends LightningElement {
   _accountId;
-  members = [];
+  _members = [];
 
   @api
   set recordId(id) {
     this._accountId = id;
     getTeamMembers({ accountId: id }).then(
       (result) =>
-        (this.members = result.map((r) => ({
+        (this._members = result.map((r) => ({
           id: r.Id,
           role: r.TeamMemberRole,
           userId: r.UserId,
@@ -24,6 +28,14 @@ export default class AccountCommissionSplitter extends LightningElement {
     return this._accountId;
   }
 
+  get members() {
+    return this._members.map((m) => {
+      // record level validation would go here
+      return m;
+    });
+  }
+
+  // getter for role groups
   get carpenters() {
     return this.members.filter((m) => m.role === 'Carpenter');
   }
@@ -34,5 +46,48 @@ export default class AccountCommissionSplitter extends LightningElement {
 
   get fixers() {
     return this.members.filter((m) => m.role === 'Fixer');
+  }
+  // end getter for role groups
+
+  // getter for role group validations
+  get carpentersError() {
+    if (percentageSum(this.carpenters) < 100) {
+      return 'Total Commission is below 100%';
+    }
+
+    if (percentageSum(this.carpenters) > 100) {
+      return 'Total Commission is above 100%';
+    }
+    // further group validation would go here
+    return '';
+  }
+
+  get plumbersError() {
+    if (percentageSum(this.plumbers) < 100) {
+      return 'Total Commission is below 100%';
+    }
+
+    if (percentageSum(this.plumbers) > 100) {
+      return 'Total Commission is above 100%';
+    }
+    // further group validation would go here
+    return '';
+  }
+
+  get fixersError() {
+    if (percentageSum(this.fixers) < 100) {
+      return 'Total Commission is below 100%';
+    }
+
+    if (percentageSum(this.fixers) > 100) {
+      return 'Total Commission is above 100%';
+    }
+    // further group validation would go here
+    return '';
+  }
+  // end getter for role group validations
+
+  handleRowChange({ detail: { id, pct } }) {
+    this.members = this.members.map((m) => (m.id === id ? { ...m, pct } : m));
   }
 }

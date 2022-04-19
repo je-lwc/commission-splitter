@@ -5,15 +5,27 @@
     </section>
     <section>
       <h1>Carpenters</h1>
-      <c-account-team-commission-list members={carpenters}></c-account-team-commission-list>
+      <c-account-team-commission-list
+        members={carpenters}
+        error={carpentersError}
+        onrowchange={handleRowChange}
+      ></c-account-team-commission-list>
     </section>
     <section>
       <h1>Plumbers</h1>
-      <c-account-team-commission-list members={plumbers}></c-account-team-commission-list>
+      <c-account-team-commission-list
+        members={plumbers}
+        error={plumbersError}
+        onrowchange={handleRowChange}
+      ></c-account-team-commission-list>
     </section>
     <section>
       <h1>Fixers</h1>
-      <c-account-team-commission-list members={fixers} error="1"></c-account-team-commission-list>
+      <c-account-team-commission-list
+        members={fixers}
+        error={fixersError}
+        onrowchange={handleRowChange}
+      ></c-account-team-commission-list>
     </section>
   </div>
 </template>
