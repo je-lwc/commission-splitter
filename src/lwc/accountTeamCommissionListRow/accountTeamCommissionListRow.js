@@ -30,11 +30,11 @@ export default class AccountTeamCommissionListRow extends LightningElement {
   }
 
   renderedCallback() {
-    const table = this.template.querySelector('.row');
-    if (this.error) {
-      table.classList.add('error');
+    const row = this.template.querySelector('.row');
+    if (this.member.error) {
+      row.classList.add('error');
     } else {
-      table.classList.remove('error');
+      row.classList.remove('error');
     }
   }
 }
