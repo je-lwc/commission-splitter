@@ -28,4 +28,13 @@ export default class AccountTeamCommissionListRow extends LightningElement {
   handleNumberInput({ currentTarget: { value } }) {
     this.handlePercentageUpdate(value);
   }
+
+  renderedCallback() {
+    const table = this.template.querySelector('.row');
+    if (this.error) {
+      table.classList.add('error');
+    } else {
+      table.classList.remove('error');
+    }
+  }
 }
