@@ -51,6 +51,9 @@ export default class AccountCommissionSplitter extends LightningElement {
 
   // getter for role group validations
   get carpentersError() {
+    if (!this.carpenters.length) {
+      return '';
+    }
     if (percentageSum(this.carpenters) < 100) {
       return 'Total Commission is below 100%';
     }
@@ -63,6 +66,9 @@ export default class AccountCommissionSplitter extends LightningElement {
   }
 
   get plumbersError() {
+    if (!this.carpenters.length) {
+      return '';
+    }
     if (percentageSum(this.plumbers) < 100) {
       return 'Total Commission is below 100%';
     }
@@ -75,6 +81,9 @@ export default class AccountCommissionSplitter extends LightningElement {
   }
 
   get fixersError() {
+    if (!this.carpenters.length) {
+      return '';
+    }
     if (percentageSum(this.fixers) < 100) {
       return 'Total Commission is below 100%';
     }
