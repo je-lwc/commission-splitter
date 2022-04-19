@@ -66,7 +66,7 @@ export default class AccountCommissionSplitter extends LightningElement {
   }
 
   get plumbersError() {
-    if (!this.carpenters.length) {
+    if (!this.plumbers.length) {
       return '';
     }
     if (percentageSum(this.plumbers) < 100) {
@@ -81,7 +81,7 @@ export default class AccountCommissionSplitter extends LightningElement {
   }
 
   get fixersError() {
-    if (!this.carpenters.length) {
+    if (!this.fixers.length) {
       return '';
     }
     if (percentageSum(this.fixers) < 100) {
