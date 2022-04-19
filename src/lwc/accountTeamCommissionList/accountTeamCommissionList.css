@@ -30,3 +30,8 @@ c-account-team-commission-list-row {
 .error {
   box-shadow: 0 0 10px 3px #d9534f;
 }
+
+.errorMsg {
+  color: #d9534f;
+  font-size: 10px;
+}
