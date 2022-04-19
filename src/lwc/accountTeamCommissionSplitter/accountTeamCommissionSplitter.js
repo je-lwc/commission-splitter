@@ -31,6 +31,9 @@ export default class AccountCommissionSplitter extends LightningElement {
   get members() {
     return this._members.map((m) => {
       // record level validation would go here
+      if (m.role === 'Carpenter' && m.pct > 50) {
+        return { ...m, error: 'Carpenter commission cannot go above 50%' };
+      }
       return m;
     });
   }
