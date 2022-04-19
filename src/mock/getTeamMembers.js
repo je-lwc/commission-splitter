@@ -8,7 +8,7 @@ export default function getTeamMembers() {
           Id: 'VwO3CXSPGaXziji',
           TeamMemberRole: 'Carpenter',
           UserId: 'W1Tcbuw82CUFFhJ',
-          SplitPercentage__c : 20,
+          SplitPercentage__c: 50,
           User: {
             Name: 'Lucca Salinas'
           }
@@ -17,7 +17,7 @@ export default function getTeamMembers() {
           Id: '05uszpaOuZDJJJ6',
           TeamMemberRole: 'Carpenter',
           UserId: 'c4ICODIsijN5mL7',
-          SplitPercentage__c : 80,
+          SplitPercentage__c: 50,
           User: {
             Name: 'Zoha Lara'
           }
@@ -26,7 +26,7 @@ export default function getTeamMembers() {
           Id: 'zcp722VnlWSjvJQ',
           TeamMemberRole: 'Plumber',
           UserId: '17Dugf8cga9VV9M',
-          SplitPercentage__c : 100,
+          SplitPercentage__c: 100,
           User: {
             Name: 'Ritik Tucker'
           }
