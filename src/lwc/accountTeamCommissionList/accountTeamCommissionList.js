@@ -10,7 +10,7 @@ export default class AccountTeamCommissionList extends LightningElement {
   renderedCallback() {
     const table = this.template.querySelector('.table');
     if (this.error) {
-      table.class.add('.error');
+      table.classList.add('.error');
     }
   }
 }
