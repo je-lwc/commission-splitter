@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 import getTeamMembers from '@salesforce/apex/AccountTeamController.getTeamMembers';
 
 function percentageSum(members) {
+  console.log(members.reduce((sum, m) => sum + parseInt(m.pct, 10), 0));
   return members.reduce((sum, m) => sum + parseInt(m.pct, 10), 0) === 100;
 }
 
